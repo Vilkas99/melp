@@ -1,26 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import _ from "lodash";
-import FakeData from "../../data/restaurants_initial";
+import { selectValores } from "../../Utils/Redux/Features/Restaurantes/restaurantesSlice";
 
 import BuscarFiltrar from "./Buscador";
 import MiCarousel from "./Carousel";
-import styled from "styled-components";
 
 const Elementos = () => {
   const [busqueda, setBusqueda] = useState("");
   const [filtro, setFiltro] = useState("");
   const [tipoOrden, setTipoOrden] = useState("desc");
+  const datosFinales = useSelector(selectValores);
 
-  let pedazosData = _.chunk(FakeData, 3);
+  let pedazosData = _.chunk(datosFinales, 3);
   if (filtro == "alphabet") {
     let organizados = _.orderBy(
-      FakeData,
+      datosFinales,
       [(data) => data.name.toLocaleLowerCase()],
       [tipoOrden]
     );
     pedazosData = _.chunk(organizados, 3);
   } else if (filtro == "rating") {
-    let organizados = _.orderBy(FakeData, [(data) => data.rating], [tipoOrden]);
+    let organizados = _.orderBy(
+      datosFinales,
+      [(data) => data.rating],
+      [tipoOrden]
+    );
     pedazosData = _.chunk(organizados, 3);
   }
   return (

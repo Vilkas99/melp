@@ -10,7 +10,7 @@ function Datos() {
   };
   return (
     <div>
-      <MiMapa MiData={FakeData} estilo={estiloMapa} />
+      <MiMapa estilo={estiloMapa} />
     </div>
   );
 }

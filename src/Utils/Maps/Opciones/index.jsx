@@ -26,7 +26,7 @@ const Opciones = ({ setRadio, setRating }) => {
             <MiSlider
               setRadio={setRadio}
               defaultValue={30000}
-              range={[30000, 1000000]}
+              range={[300, 1000]}
               title={"Select Radius"}
             />
             <MiSlider

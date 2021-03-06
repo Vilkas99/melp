@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { computeDistanceBetween } from "spherical-geometry-js";
 import { GoogleMap, LoadScript, Marker, Circle } from "@react-google-maps/api";
+import { useSelector, useDispatch } from "react-redux";
+import { selectValores } from "../../Utils/Redux/Features/Restaurantes/restaurantesSlice";
 import { Row, Col } from "antd";
 
 import MiMarcador from "./Marcador";
@@ -8,7 +10,7 @@ import Opciones from "./Opciones";
 import Estadistica from "../../Components/Data_Maps/Estadistica";
 import { identity } from "lodash";
 
-function MiMapa({ restaurant, MiData, estilo }) {
+function MiMapa({ restaurant, estilo }) {
   const [posMarcador, setPosMarcador] = useState(null);
   const [mostrarMarcador, setMostar] = useState(false);
   const [radio, setRadio] = useState(3000);
@@ -18,6 +20,8 @@ function MiMapa({ restaurant, MiData, estilo }) {
     lat: -3.745,
     lng: -38.523,
   });
+
+  const MiData = useSelector(selectValores);
 
   useEffect(() => {
     !restaurant &&
@@ -32,7 +36,7 @@ function MiMapa({ restaurant, MiData, estilo }) {
     setMostar(true);
     MiData.map((data) => {
       let distancia = Math.ceil(
-        computeDistanceBetween(e.latLng, data.address.Location)
+        computeDistanceBetween(e.latLng, data.address.location)
       );
       if (distancia < radio) {
         estado.push(data);
@@ -69,7 +73,7 @@ function MiMapa({ restaurant, MiData, estilo }) {
               MiData.map((data, index) => (
                 <MiMarcador
                   key={index}
-                  location={data?.address.Location}
+                  location={data?.address.location}
                   data={data}
                 />
               ))}

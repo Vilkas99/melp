@@ -12,15 +12,16 @@ import {
 } from "react-share";
 
 const SocialMediaLink = ({ frase }) => {
+  let liga = "https://vilkas99.github.io/melp/";
   return (
     <Row>
-      <FacebookShareButton url={"https://www.shapedivider.app/"} quote={frase}>
+      <FacebookShareButton url={liga} quote={frase}>
         <FacebookIcon round size={30} />
       </FacebookShareButton>
-      <TwitterShareButton url={"https://www.shapedivider.app/"} via={frase}>
+      <TwitterShareButton url={liga} via={frase}>
         <TwitterIcon round size={30} />
       </TwitterShareButton>
-      <WhatsappShareButton url={"https://www.shapedivider.app/"} title={frase}>
+      <WhatsappShareButton url={liga} title={frase}>
         <WhatsappIcon round size={30} />
       </WhatsappShareButton>
     </Row>

@@ -52,7 +52,7 @@ const CardInfo = ({ name, address, rating, data }) => {
             <ul>
               <li>Street: {address?.street}</li>
               <li>City: {address?.city}</li>
-              <li>State: {address?.State}</li>
+              <li>State: {address?.state}</li>
             </ul>
             <Rate disabled defaultValue={rating} />
             <Button onClick={() => showModal(true)}>Show more...</Button>
