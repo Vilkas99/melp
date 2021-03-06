@@ -187,6 +187,35 @@ const MiDropdown = ({ setFiltro, options, title, value }) => {
   );
 };
 
+const BuscarFiltrar = () => {
+  return (
+    <Row style={{ margin: "50px" }}>
+      <Col>
+        <Search
+          placeholder="Fast fruit..."
+          enterButton
+          onChange={(e) => {
+            setBusqueda(e.target.value);
+            console.log(busqueda);
+          }}
+        />
+        <MiDropdown
+          setFiltro={setFiltro}
+          options={["Alphabet", "Rating"]}
+          title="Filter"
+          value={filtro}
+        />
+        <MiDropdown
+          setFiltro={setTipoOrden}
+          options={["Asc", "Desc"]}
+          title="by..."
+          value={tipoOrden}
+        />
+      </Col>
+    </Row>
+  );
+};
+
 function Restaurantes() {
   const [busqueda, setBusqueda] = useState("");
   const [filtro, setFiltro] = useState("");
@@ -214,31 +243,7 @@ function Restaurantes() {
         margin: "15px",
       }}
     >
-      <Row style={{ margin: "50px" }}>
-        <Col>
-          <Search
-            placeholder="Fast fruit..."
-            enterButton
-            onChange={(e) => {
-              setBusqueda(e.target.value);
-              console.log(busqueda);
-            }}
-          />
-          <MiDropdown
-            setFiltro={setFiltro}
-            options={["Alphabet", "Rating"]}
-            title="Filter"
-            value={filtro}
-          />
-          <MiDropdown
-            setFiltro={setTipoOrden}
-            options={["Asc", "Desc"]}
-            title="by..."
-            value={tipoOrden}
-          />
-        </Col>
-      </Row>
-
+      <BuscarFiltrar />
       <div style={{ display: "flex", flexDirection: "column" }}>
         <Carousel effect="fade">
           {console.log(pedazosData)}
