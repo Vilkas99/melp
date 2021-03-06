@@ -21,6 +21,7 @@ function Home() {
   };
 
   useEffect(() => {
+    console.log("Esta es la ÚLTIMA VERSIÓN");
     const fetchData = async () => {
       try {
         await axios
