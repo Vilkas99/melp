@@ -13,7 +13,7 @@ const FakeData = [
       State: "Puebla",
       Location: {
         lat: 12,
-        long: 35,
+        lng: 35,
       },
     },
     rating: 3,
@@ -31,8 +31,8 @@ const FakeData = [
       city: "Puebla",
       State: "Puebla",
       Location: {
-        lat: 12,
-        long: 35,
+        lat: 29.53998,
+        lng: 26.19698,
       },
     },
     rating: 4,
@@ -50,8 +50,8 @@ const FakeData = [
       city: "Puebla",
       State: "Puebla",
       Location: {
-        lat: 12,
-        long: 35,
+        lat: 40.1639,
+        lng: 86.49127,
       },
     },
     rating: 1,
@@ -69,8 +69,8 @@ const FakeData = [
       city: "Puebla",
       State: "Puebla",
       Location: {
-        lat: 12,
-        long: 35,
+        lat: 2.03404,
+        lng: 40.75465,
       },
     },
     rating: 1,
