@@ -9,7 +9,10 @@ function useFetch() {
   );
 
   let config = {
-    headers: { "Access-Control-Allow-Origin": "*" },
+    headers: {
+      "Access-Control-Allow-Origin": "https://vilkas99.github.io/melp/",
+      "Access-Control-Allow-Origin": true,
+    },
   };
 
   useEffect(() => {
