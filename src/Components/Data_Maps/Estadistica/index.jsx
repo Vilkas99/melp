@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Typography, Button, Card, Rate, Row, Col } from "antd";
+import {
+  Typography,
+  Button,
+  Card,
+  Alert,
+  Row,
+  Col,
+  Collapse,
+  Rate,
+} from "antd";
 import { std } from "mathjs";
 import _ from "lodash";
+import { CaretRightOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
 const { Title } = Typography;
+const { Panel } = Collapse;
 
 const CardEstadistica = ({ marcadores, promedio, desviacionStd }) => {
   return (
@@ -38,9 +49,33 @@ const CardRecomendacion = ({ marcadores, rango }) => {
 
   return (
     <Card>
-      {marcadoresFiltrados.map((elemento) => (
-        <Meta key={elemento.id} title={elemento.name} />
-      ))}
+      <Collapse>
+        {marcadoresFiltrados.map((elemento) => (
+          <>
+            <Panel
+              header={
+                <Col>
+                  <h3>{elemento.name}</h3>
+                  <Rate
+                    defaultValue={elemento.rating}
+                    disabled
+                    count={4}
+                  ></Rate>
+                </Col>
+              }
+              key={elemento.id}
+            >
+              <ul>
+                <li>Street: {elemento.address.street}</li>
+                <li>City: {elemento.address.city}</li>
+                <li>State: {elemento.address.State}</li>
+              </ul>
+
+              <Button>Show more...</Button>
+            </Panel>
+          </>
+        ))}
+      </Collapse>
     </Card>
   );
 };
@@ -51,7 +86,7 @@ function Estadistica({ marcadores, rango }) {
   const [desviacionStd, setDesviacion] = useState(0);
 
   const desviacionEstandar = (misRatings) => {
-    if (misRatings.length >= 1) {
+    if (misRatings.length > 1) {
       console.log("Mis ratings: ", misRatings);
       setDesviacion(std(misRatings));
     } else {
@@ -85,18 +120,16 @@ function Estadistica({ marcadores, rango }) {
   }, [marcadores]);
 
   return (
-    <div>
-      <Row>
-        <Col span={24}>
-          <CardEstadistica
-            marcadores={marcadores}
-            promedio={promedio}
-            desviacionStd={desviacionStd}
-          />
-          <CardRecomendacion marcadores={marcadores} rango={rango} />
-        </Col>
-      </Row>
-    </div>
+    <Row gutter={{ xs: 12 }}>
+      <Col xs={24} m={12} flex="auto">
+        <CardEstadistica
+          marcadores={marcadores}
+          promedio={promedio}
+          desviacionStd={desviacionStd}
+        />
+        <CardRecomendacion marcadores={marcadores} rango={rango} />
+      </Col>
+    </Row>
   );
 }
 

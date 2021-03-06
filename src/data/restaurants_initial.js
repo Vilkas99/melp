@@ -2,9 +2,9 @@ const FakeData = [
   {
     id: 12121212,
     name: "Tortas Lalo",
-    contacto: {
+    contact: {
       site: "www.tortasLalo",
-      emal: "victorium99@hotmail.com",
+      email: "victorium99@hotmail.com",
       phone: "2221757251",
     },
     address: {
@@ -21,9 +21,9 @@ const FakeData = [
   {
     id: 12121213,
     name: "Tacos Pepé",
-    contacto: {
+    contact: {
       site: "www.tacosPepe",
-      emal: "victorium99@hotmail.com",
+      email: "victorium99@hotmail.com",
       phone: "2221757251",
     },
     address: {
@@ -40,9 +40,9 @@ const FakeData = [
   {
     id: 12121214,
     name: "La Oriental",
-    contacto: {
+    contact: {
       site: "www.laOriental",
-      emal: "victorium99@hotmail.com",
+      email: "victorium99@hotmail.com",
       phone: "2221757251",
     },
     address: {
@@ -59,9 +59,9 @@ const FakeData = [
   {
     id: 12121215,
     name: "Zon Pastor",
-    contacto: {
+    contact: {
       site: "www.laOriental",
-      emal: "victorium99@hotmail.com",
+      email: "victorium99@hotmail.com",
       phone: "2221757251",
     },
     address: {

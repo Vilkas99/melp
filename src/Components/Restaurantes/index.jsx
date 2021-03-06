@@ -4,6 +4,7 @@ import FakeData from "../../data/restaurants_initial";
 
 import BuscarFiltrar from "./Buscador";
 import MiCarousel from "./Carousel";
+import styled from "styled-components";
 
 const Elementos = () => {
   const [busqueda, setBusqueda] = useState("");
@@ -28,7 +29,6 @@ const Elementos = () => {
         display: "block",
         alignItems: "center",
         justifyContent: "center",
-        margin: "15px",
       }}
     >
       <BuscarFiltrar

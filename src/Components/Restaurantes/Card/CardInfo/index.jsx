@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Button, Card, Rate } from "antd";
+import styled from "styled-components";
+import MiModal from "../../../Modal";
 const { Meta } = Card;
 const { Title } = Typography;
 
-const CardInfo = ({ name, address, rating }) => {
+const StyledCard = styled(Card)`
+  width: 90vw;
+  height: 80vh;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 700px) {
+    margin-left: 15vw;
+    width: 65vw;
+    height: 80vh;
+    margin-right: 40px;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 25vw;
+    height: 60vh;
+    margin-right: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+    width: 25vw;
+    height: 70vh;
+  }
+`;
+
+const CardInfo = ({ name, address, rating, data }) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
   return (
-    <Card
+    <StyledCard
       hoverable
-      style={{ width: "90vw", height: "20vh", marginBottom: "60vh" }}
       cover={
         <img
           alt="example"
@@ -25,11 +55,16 @@ const CardInfo = ({ name, address, rating }) => {
               <li>State: {address?.State}</li>
             </ul>
             <Rate disabled defaultValue={rating} />
-            <Button>Show more...</Button>
+            <Button onClick={() => showModal(true)}>Show more...</Button>
+            <MiModal
+              visible={isModalVisible}
+              setModal={setIsModalVisible}
+              data={data}
+            />
           </div>
         }
       />
-    </Card>
+    </StyledCard>
   );
 };
 

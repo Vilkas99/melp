@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
-
 import FilasCards from "../ListCards";
+import "../../../index.css";
 
 const MiCarousel = ({ pedazosData, busqueda, filtro }) => {
   return (

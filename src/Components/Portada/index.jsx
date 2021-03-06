@@ -5,7 +5,7 @@ import styled from "styled-components";
 const { Title } = Typography;
 
 const StyledContenedor = styled.div`
-  background-image: url("https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Restaurant_N%C3%A4sinneula.jpg");
   background-size: cover;
 
   display: inline-flex;
@@ -36,14 +36,22 @@ const StyledContenedor = styled.div`
     width: 100%;
     z-index: -1;
   }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 `;
 
 const StyledTitle = styled(Title)`
   width: 100%;
   &.ant-typography {
     color: white;
-    font-size: 90px;
+    font-size: 5rem;
     margin: 0;
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+      font-size: 15rem;
+    }
   }
 `;
 
@@ -52,11 +60,21 @@ const StyledButton = styled(Button)`
   &.ant-typography {
     color: white;
   }
+  @media screen and (min-width: 1200px) {
+    max-width: 90vw;
+    width: 20vw;
+    height: 5vh;
+    font-size: 1.6rem;
+  }
 `;
 
 const Titulo = () => {
   return (
-    <StyledButton type="primary" shape="round">
+    <StyledButton
+      type="primary"
+      shape="round"
+      onClick={() => window.scrollTo({ top: 900, behavior: "smooth" })}
+    >
       Seach restaurants
     </StyledButton>
   );
@@ -64,14 +82,16 @@ const Titulo = () => {
 
 function Portada() {
   return (
-    <StyledContenedor>
-      <Row>
-        <Col span={16} style={{ margin: "50px" }}>
-          <StyledTitle>Melp</StyledTitle>
-          <Titulo />
-        </Col>
-      </Row>
-    </StyledContenedor>
+    <>
+      <StyledContenedor>
+        <Row>
+          <Col span={24} style={{ margin: "50px" }}>
+            <StyledTitle>Melp</StyledTitle>
+            <Titulo />
+          </Col>
+        </Row>
+      </StyledContenedor>
+    </>
   );
 }
 
