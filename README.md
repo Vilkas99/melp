@@ -51,11 +51,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-My goal was to complete each one of the requeriments added in the document of instructions based on a strong architecture that would allow me to finish the main objectives, but as well the bonus indications. I'm really proud for acomplishing all of them in time and with professional quality (At least the one you can ask in just 24 hours of development! haahaha). 
+My goal was to complete each one of the requirements added in the document of instructions based on a strong architecture that would allow me to finish the main objectives, but as well as the bonus indications. I'm really proud for accomplishing all of them in time and with professional quality (At least the one you can ask in just 24 hours of development! hahaha).
 
 Main Features:
-* Filtering & Searching of restaurants
-* Dinamic Data based on the connection with a Node-Express API made as a proxy between the front-end and the API for the restaurants data
+* Filtering & Searching for restaurants
+* Dynamic Data based on the connection with a Node-Express API made as a proxy between the front-end and the API for the restaurants' data
 * Data analysis based on the position of the user in a google-maps interface
 * Social media sharing button & functionality
 * Responsiveness
