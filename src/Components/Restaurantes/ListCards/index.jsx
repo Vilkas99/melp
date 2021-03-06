@@ -1,5 +1,5 @@
 import React from "react";
-import CardInfo from "../Card";
+import CardInfo from "../Card/CardInfo";
 
 const FilasCards = ({ dataArray, busqueda }) => {
   return (
