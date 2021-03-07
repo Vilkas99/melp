@@ -1,70 +1,116 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-### `yarn start`
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h3 align="center">Melp</h3>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <p align="center">
+     - Project submission by Victor Mancera for the Front end Developer role at Intelimetrica
+    <a href="https://vilkas99.github.io/melp/">View Demo</a>
+  </p>
+</p>
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>    
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>    
+  </ol>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+My goal was to complete each one of the requirements added in the document of instructions based on a strong architecture that would allow me to finish the main objectives, but as well as the bonus indications. I'm really proud for accomplishing all of them in time and with professional quality (At least the one you can ask in just 24 hours of development! hahaha).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Main Features:
+* Filtering & Searching for restaurants
+* Dynamic Data based on the connection with a Node-Express API made as a proxy between the front-end and the API for the restaurants' data
+* Data analysis based on the position of the user in a google-maps interface
+* Social media sharing button & functionality
+* Responsiveness
 
-## Learn More
+### Built With
+* [React](https://es.reactjs.org/)
+* [Redux - Toolkit](https://redux-toolkit.js.org/)
+* [Lodash](https://lodash.com/)
+* [Axios](https://github.com/axios/axios)
+* [MathJS](https://mathjs.org/)
+* [Google Maps](https://www.npmjs.com/package/@react-google-maps/api)
+* [Spherical Geometry](https://www.npmjs.com/package/spherical-geometry-js)
+* [Styled Components](https://styled-components.com/)
+* [NodeJS](https://nodejs.org/en/)
+* [Express](https://expressjs.com/es/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<!-- GETTING STARTED -->
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Fork the repo and start coding!:)
 
-### Analyzing the Bundle Size
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm install for all the libraries
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- ROADMAP -->
+## Roadmap
 
-### Advanced Configuration
+I wanted to apply an "Engineering" approach to the resolution of this challenge, and for that, I've applied a set of steps to guarantee a robust architecture. I started by creating "Use-Case" [diagrams](https://lucid.app/lucidchart/e243bee5-eb12-40ff-b4cc-3a2ed5e0eb31/view) in LucidChart that allowed me to see the application as a whole, and to identify potential dangers, and connections between the interactions in the front-end and the data processing. After that, I spent a considerable amount of time creating ["mockups"](https://www.figma.com/file/tx0eV2gHzJ264ShEgPj1Qj/Untitled?node-id=1%3A295) using Figma and applying a "mobile-first" mindset. With all the preparation completed, I started coding by first creating all the visual components for every instance of the application (Both in mobile and desktop), once I finished I then moved to create the connection with the API provided in the instructions; soon I discovered that CORS errors where being presented by trying to fetch the data directly in the client-side. For that, I decided to create an API-Proxy application with Express and Heroky to apply the necessary headers to the client and to return data to the front. After that final step, I uploaded the page to Github.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+<!-- CONTACT -->
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Víctor Alfonso Mancera Osorio - [@your_twitter](https://twitter.com/VictorMancera99) - vmanceraosorio@gmail.com
+
+Project Link: [https://github.com/Vilkas99/melp](https://github.com/Vilkas99/melp)
+
+
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/victormancera/
+[product-screenshot]: images/screenshot.png
