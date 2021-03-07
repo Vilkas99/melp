@@ -12,6 +12,7 @@ import {
 import { std } from "mathjs";
 import _ from "lodash";
 import { CaretRightOutlined } from "@ant-design/icons";
+import Modal from "../../Modal";
 
 const { Meta } = Card;
 const { Title } = Typography;
@@ -36,7 +37,32 @@ const CardEstadistica = ({ marcadores, promedio, desviacionStd }) => {
   );
 };
 
+const TarjetaRestaurante = ({ elemento }) => {
+  const [visible, setVisible] = useState(false);
+  return (
+    <Panel
+      header={
+        <Col>
+          <h3>{elemento.name}</h3>
+          <Rate defaultValue={elemento.rating} disabled count={4}></Rate>
+        </Col>
+      }
+      key={elemento.id}
+    >
+      <ul>
+        <li>Street: {elemento.address.street}</li>
+        <li>City: {elemento.address.city}</li>
+        <li>State: {elemento.address.State}</li>
+      </ul>
+
+      <Button>Show more...</Button>
+      <Modal visible={visible} setModal={setVisible} data={elemento} />
+    </Panel>
+  );
+};
+
 const CardRecomendacion = ({ marcadores, rango }) => {
+  const [visible, setVisible] = useState(false);
   const [marcadoresFiltrados, setMarcadoresFiltrados] = useState([]);
   useEffect(() => {
     let misMarcadores = _.filter(
@@ -68,10 +94,11 @@ const CardRecomendacion = ({ marcadores, rango }) => {
               <ul>
                 <li>Street: {elemento.address.street}</li>
                 <li>City: {elemento.address.city}</li>
-                <li>State: {elemento.address.State}</li>
+                <li>State: {elemento.address.state}</li>
               </ul>
 
-              <Button>Show more...</Button>
+              <Button onClick={() => setVisible(!visible)}>Show more...</Button>
+              <Modal visible={visible} setModal={setVisible} data={elemento} />
             </Panel>
           </>
         ))}
@@ -80,7 +107,7 @@ const CardRecomendacion = ({ marcadores, rango }) => {
   );
 };
 
-function Estadistica({ marcadores, rango }) {
+function Estadistica({ marcadores, rango, data }) {
   const [promedio, setPromedio] = useState(0);
   const [ratings, setRatings] = useState([]);
   const [desviacionStd, setDesviacion] = useState(0);
@@ -127,7 +154,7 @@ function Estadistica({ marcadores, rango }) {
           promedio={promedio}
           desviacionStd={desviacionStd}
         />
-        <CardRecomendacion marcadores={marcadores} rango={rango} />
+        <CardRecomendacion marcadores={marcadores} rango={rango} data={data} />
       </Col>
     </Row>
   );

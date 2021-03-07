@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography, Button, Card, Rate } from "antd";
 import MiMapa from "../../Utils/Maps";
-import FakeData from "../../data/restaurants_initial";
 
 function Datos() {
   const estiloMapa = {

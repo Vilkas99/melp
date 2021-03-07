@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Button, Card, Rate } from "antd";
+import Modal from "../../../Modal";
 
 const { Meta } = Card;
 const { Title } = Typography;
 
 const CardInfoMapa = ({ data }) => {
+  const [visible, setVisible] = useState(false);
   return (
     <Card
       style={{ width: "150px" }}
@@ -24,7 +26,8 @@ const CardInfoMapa = ({ data }) => {
               disabled
               defaultValue={data.rating}
             />
-            <Button>Show more...</Button>
+            <Button onClick={() => setVisible(!visible)}>Show more...</Button>
+            <Modal visible={visible} setModal={setVisible} data={data} />
           </div>
         }
       />
