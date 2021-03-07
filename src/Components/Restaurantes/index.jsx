@@ -42,7 +42,7 @@ const Elementos = () => {
         type="warning"
         showIcon
         closable
-        style={{ width: "20vw" }}
+        style={{ width: "320px" }}
       />
       <BuscarFiltrar
         setBusqueda={setBusqueda}
