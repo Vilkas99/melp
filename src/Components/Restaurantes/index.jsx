@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import _ from "lodash";
 import { selectValores } from "../../Utils/Redux/Features/Restaurantes/restaurantesSlice";
+import { Alert } from "antd";
 
 import BuscarFiltrar from "./Buscador";
 import MiCarousel from "./Carousel";
@@ -36,6 +37,13 @@ const Elementos = () => {
         justifyContent: "center",
       }}
     >
+      <Alert
+        message="If the data shown is not the one from the API, wait a couple of seconds until the server wakes up (It's running in a free Heroku plan)"
+        type="warning"
+        showIcon
+        closable
+        style={{ width: "20vw" }}
+      />
       <BuscarFiltrar
         setBusqueda={setBusqueda}
         setFiltro={setFiltro}
