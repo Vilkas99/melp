@@ -49,7 +49,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 My goal was to complete each one of the requirements added in the document of instructions based on a strong architecture that would allow me to finish the main objectives, but as well as the bonus indications. I'm really proud for accomplishing all of them in time and with professional quality (At least the one you can ask in just 24 hours of development! hahaha).
 
