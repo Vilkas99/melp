@@ -94,7 +94,7 @@ I wanted to apply an "Engineering" approach to the resolution of this challenge,
 <!-- CONTACT -->
 ## Contact
 
-Víctor Alfonso Mancera Osorio - [@your_twitter](https://twitter.com/VictorMancera99) - vmanceraosorio@gmail.com
+Víctor Alfonso Mancera Osorio - [@victormancera99](https://twitter.com/VictorMancera99) - vmanceraosorio@gmail.com
 
 Project Link: [https://github.com/Vilkas99/melp](https://github.com/Vilkas99/melp)
 
