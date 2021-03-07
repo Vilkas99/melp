@@ -49,7 +49,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 My goal was to complete each one of the requirements added in the document of instructions based on a strong architecture that would allow me to finish the main objectives, but as well as the bonus indications. I'm really proud for accomplishing all of them in time and with professional quality (At least the one you can ask in just 24 hours of development! hahaha).
 
@@ -87,7 +86,7 @@ npm install for all the libraries
 <!-- ROADMAP -->
 ## Roadmap
 
-I wanted to apply an "Engineering" approach to the resolution of this challenge, and for that, I've applied a set of steps to guarantee a robust architecture. I started by creating "Use-Case" [diagrams](https://lucid.app/lucidchart/e243bee5-eb12-40ff-b4cc-3a2ed5e0eb31/view) in LucidChart that allowed me to see the application as a whole, and to identify potential dangers, and connections between the interactions in the front-end and the data processing. After that, I spent a considerable amount of time creating ["mockups"](https://www.figma.com/file/tx0eV2gHzJ264ShEgPj1Qj/Untitled?node-id=1%3A295) using Figma and applying a "mobile-first" mindset. With all the preparation completed, I started coding by first creating all the visual components for every instance of the application (Both in mobile and desktop), once I finished I then moved to create the connection with the API provided in the instructions; soon I discovered that CORS errors where being presented by trying to fetch the data directly in the client-side. For that, I decided to create an API-Proxy application with Express and Heroky to apply the necessary headers to the client and to return data to the front. After that final step, I uploaded the page to Github.
+I wanted to apply an "Engineering" approach to the resolution of this challenge, and for that, I've applied a set of steps to guarantee a robust architecture. I started by creating "Use-Case" [diagrams](https://lucid.app/lucidchart/e243bee5-eb12-40ff-b4cc-3a2ed5e0eb31/view) in LucidChart that allowed me to see the application as a whole, and to identify potential dangers, and connections between the interactions in the front-end and the data processing. After that, I spent a considerable amount of time creating ["mockups"](https://www.figma.com/file/tx0eV2gHzJ264ShEgPj1Qj/Untitled?node-id=1%3A295) using Figma and applying a "mobile-first" mindset. With all the preparation completed, I started coding by first creating all the visual components for every instance of the application (Both in mobile and desktop), once I finished I then moved to create the connection with the API provided in the instructions; soon I discovered that CORS errors where being presented by trying to fetch the data directly in the client-side. For that, I decided to create an API-Proxy application with Express and Heroku to apply the necessary headers to the client and to return data to the front. After that final step, I uploaded the page to Github.
 
 
 
